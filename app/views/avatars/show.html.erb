@@ -1,0 +1,7 @@
+<%= image_tag "#{@avatar.tag}.png", class: "pet_pic"%>
+
+<%= @avatar.name %>
+| Energy : <%= "*" * @avatar.energy %>
+| Strength : <%= "+" * (@avatar.strength / 10) %>
+
+<%= link_to "LISTING", avatars_path %>

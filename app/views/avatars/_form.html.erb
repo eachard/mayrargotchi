@@ -1,0 +1,26 @@
+<h2>Mon formulaire</h2>
+
+<%= form_for(@avatar) do |f| %>
+
+	<%= f.label(:name) %>
+	<%= f.text_field :name %>
+	
+	<%= f.label(:energy) %>
+	<%= f.select :energy, (1..10).to_a %>
+	
+	<%= f.label(:strength) %>
+	<%= f.select :strength, (1..100).to_a %>
+	
+	<%= f.label(:tag) %>
+	<%= f.select :tag, ["cat", "dog", "sheep"] %>
+	
+	<%= f.submit "CREATE"%>
+	
+<% end %>
+
+
+
+
+
+
+

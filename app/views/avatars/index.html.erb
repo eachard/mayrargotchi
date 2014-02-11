@@ -1,0 +1,23 @@
+<h1>Voici tes avatars</h1>
+<%= link_to "HOME", root_path %>
+
+<ul>	
+<% @avatars.each do |avatar| %>
+	<li>
+		<%= image_tag "#{avatar.tag}.png", class: "pet_pic"%>
+		<%= avatar.name %>
+		| Energy : <%= "*" * avatar.energy %>
+		| Strength : <%= "+" * (avatar.strength / 10) %>
+		
+		<%= link_to "SHOW", avatar_path(avatar) %>
+		<%= link_to "EDIT", edit_avatar_path(avatar) %>
+	
+	</li>
+<% end %>
+</ul>
+
+
+
+
+
+
